@@ -38,7 +38,7 @@ const start = async () => {
     });
     await connection.query(`CREATE DATABASE IF NOT EXISTS \`${database}\`;`);
 
-    await app.listen(process.env.PORT);
+    await app.listen(`0.0.0.0:${process.env.PORT}`);
     console.log("Serving at port 3000");
   } catch (error) {
     console.error(error);
