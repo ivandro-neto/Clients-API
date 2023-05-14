@@ -23,6 +23,6 @@ const options = {
   },
 };
 
-const model = sequelize.define("Clients", attributes, options);
+const model = sequelize.define("clients", attributes, options);
 
 module.exports = model;
