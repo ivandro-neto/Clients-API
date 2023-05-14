@@ -1,6 +1,6 @@
-const Sequelize = require('sequelize')
-const sequelize = require("../config/connection");
-
+const Sequelize = require("sequelize");
+require("dotenv").config();
+const { sequelize, config } = require("../config/connection");
 
 const attributes = {
   email: { type: Sequelize.STRING, allowNull: false },

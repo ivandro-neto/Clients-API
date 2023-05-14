@@ -1,6 +1,5 @@
 const { Op } = require("sequelize");
 const client = require("../models/clients.model");
-const config = require("../config/connection");
 
 module.exports = {
   getAllClients,
