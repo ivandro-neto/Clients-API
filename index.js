@@ -22,23 +22,7 @@ app.get('/', (req, res, next) => {
 app.use("/api/v1", clientRoute);
 const start = async () => {
   try {
-    const data = {
-      database: process.env.DB_DATABASE,
-      host: process.env.DB_HOST,
-      port: process.env.DB_PORT,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-    };
-
-    const { host, port, user, password, database } = data;
-    const connection = await mysql.createConnection({
-      host,
-      port,
-      user,
-      password,
-    });
-    await connection.query(`CREATE DATABASE IF NOT EXISTS \`${database}\`;`);
-
+  
     await app.listen(process.env.PORT, process.env.SERVER);
     console.log("Serving at port" + process.env.PORT);
   } catch (error) {
