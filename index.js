@@ -1,11 +1,7 @@
 require("dotenv").config();
-const { createProxyMiddleware } = require("http-proxy-middleware");
 
-const { config } = require("./config/connection");
-const mysql = require("mysql2/promise");
 const express = require("express");
 const { clientRoute } = require("./routes");
-const client = require("./models/clients.model");
 const app = express();
 
 app.use(express.json());
@@ -28,7 +24,6 @@ const start = async () => {
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
     };
-
     const { host, port, user, password, database } = data;
     const connection = await mysql.createConnection({
       host,
