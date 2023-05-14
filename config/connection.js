@@ -11,7 +11,7 @@ const config = {
   type: "mysql",
 };
 const sequelize = new Sequelize(config.database, config.user, config.password, {
-  host: "containers-us-west-209.railway.app" || config.host,
+  host: config.host,
   dialect: config.type,
 });
 
