@@ -7,7 +7,7 @@ const express = require("express");
 const { clientRoute } = require("./routes");
 const app = express();
 
-aapp.set("trust proxy", 1);
+app.set("trust proxy", 1);
 app.use(
   rateLimiter({
     windowMs: 15 * 60 * 1000, // 15 minutes
