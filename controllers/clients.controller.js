@@ -83,8 +83,7 @@ async function update(model, id, params) {
 }
 
 async function _delete(model, id) {
-  const user = await getUser(model, id);
-  await user.destroy();
+  return await model.destroy({where : {id : id}});
 }
 
 // helper functions
