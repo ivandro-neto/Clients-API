@@ -23,7 +23,7 @@ const start = async () => {
   try {
     const data = {
       database: process.env.DB_DATABASE,
-      host: process.env.DB_HOST | "0.0.0.0",
+      host: 'containers-us-west-209.railway.app' | process.env.DB_HOST ,
       port: process.env.DB_PORT,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
