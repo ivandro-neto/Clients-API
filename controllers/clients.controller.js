@@ -7,7 +7,7 @@ module.exports = {
   getClientByName,
   createClient,
   updateClient,
-  deleteClient: _delete,
+  deleteClient,
 };
 
 async function getAllClients(req, res) {
@@ -36,7 +36,7 @@ async function updateClient(req, res) {
 }
 
 async function deleteClient(req, res) {
-  const Client = await _delete(client, req.params.id);
+  const Client = await deleteUser(client, req.params.id);
   res.status(200).json({ data: Client });
 }
 
@@ -82,7 +82,7 @@ async function update(model, id, params) {
   user.save();
 }
 
-async function _delete(model, id) {
+async function deleteUser(model, id) {
   return await model.destroy({where : {id : id}});
 }
 
