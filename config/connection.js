@@ -15,4 +15,4 @@ const sequelize = new Sequelize(config.database, config.user, config.password, {
   dialect: config.type,
 });
 
-module.exports = {sequelize, config};
+module.exports = sequelize
