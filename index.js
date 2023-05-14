@@ -1,15 +1,14 @@
 require("dotenv").config();
-
-const mysql = require("mysql2/promise");
+const cors = require('cors')
 const express = require("express");
 const { clientRoute } = require("./routes");
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*"); // Allow requests from any domain
   res.header(
-    "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
   next();
