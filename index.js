@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
 app.use("/api/v1", clientRoute);
 const start = async () => {
   try {
-    const data = {
+    /*  const data = {
       database: process.env.DB_DATABASE,
       host: "containers-us-west-209.railway.app" || process.env.DB_HOST,
       port: process.env.DB_PORT,
@@ -37,7 +37,7 @@ const start = async () => {
       password,
     });
     await connection.query(`CREATE DATABASE IF NOT EXISTS \`${database}\`;`);
-
+ */
     await app.listen(process.env.PORT, process.env.SERVER);
     console.log("Serving at port" + process.env.PORT);
   } catch (error) {
