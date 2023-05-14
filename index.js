@@ -8,6 +8,7 @@ app.use(express.json());
 app.use(cors());
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*"); // Allow requests from any domain
+  res.header("Access-Control-Allow-Methods", "POST, GET, PATCH, DELETE"); // Allow requests from any domain
   res.header(
     "Origin, X-Requested-With, Content-Type, Accept"
   );
