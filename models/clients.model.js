@@ -10,6 +10,7 @@ const attributes = {
   name: { type: Sequelize.STRING, allowNull: false },
   paid: { type: Sequelize.BOOLEAN, allowNull: false },
   plans: { type: Sequelize.STRING, allowNull: false },
+  description: { type: Sequelize.STRING, allowNull: true },
 };
 
 const options = {

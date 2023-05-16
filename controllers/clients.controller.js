@@ -57,7 +57,7 @@ async function getUser(model, id) {
 /*******************SEQUELIZE**************** */
 
 async function getAll(model) {
-  return await model.findAll({ order: [["createdAt", "DESC"]] });
+  return await model.findAll({ order: [["createdAt", "ASC"]] });
 }
 
 async function getById(model, id) {
