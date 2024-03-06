@@ -25,6 +25,7 @@ app.use("/api/v1", clientRoute);
 const start = async () => {
   try {
     await app.listen(process.env.PORT, process.env.SERVER);
+    console.log("Serving at port" + process.env.DB_SSL);
     console.log("Serving at port" + process.env.PORT);
   } catch (error) {
     console.error(error);
