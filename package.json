@@ -21,7 +21,7 @@
     "express-rate-limit": "^6.7.0",
     "helmet": "^7.0.0",
     "http-proxy-middleware": "^2.0.6",
-    "mysql2": "^3.3.1",
+    "mysql2": "^3.9.4",
     "sequelize": "^6.31.1",
     "xss-clean": "^0.1.1"
   }
